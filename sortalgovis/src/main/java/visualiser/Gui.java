@@ -28,11 +28,11 @@ public class Gui extends JPanel{
         for (int i = 0; i < NUM_BARS; i++) {
             array[i] = i;
         }
-        shuffle();
+        //shuffle();
         setBackground(Color.darkGray);
 
         
-        new BubbleSort().runSort(new Gui());
+        //new BubbleSort().runSort(new Gui());
     }
 
     //Getters
@@ -48,7 +48,7 @@ public class Gui extends JPanel{
         int temp = array[index1];
         array[index1] = array[index2];
         array[index2] = temp;
-
+        repaint();
         sleepFor(delay);
     }
 
@@ -60,11 +60,11 @@ public class Gui extends JPanel{
         } while(time < s);
     }
 
-    private void shuffle() {
+    public void shuffle() {
         Random rng = new Random();
         for (int i = 0; i < NUM_BARS; i++) {
             int swapIndex = rng.nextInt(NUM_BARS - 1);
-            swap(i, swapIndex, 5000000);
+            swap(i, swapIndex, 1000000);
         }
     }
 

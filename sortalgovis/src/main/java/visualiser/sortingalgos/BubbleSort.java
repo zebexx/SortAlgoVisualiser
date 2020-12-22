@@ -9,13 +9,14 @@ public class BubbleSort implements Sort {
 
     @Override
     public void runSort(Gui toSort) {
+        System.out.println("test");
         boolean sorted = false;
         int temp;
         while(!sorted) {
             sorted = true;
             for (int i = 0; i < toSort.getArrayLength() - 1; i++) {
                 if (toSort.getValue(i) > toSort.getValue(i+1)) {
-                    toSort.swap(i, i+1, 500000000);
+                    toSort.swap(i, i+1, 5000);
                     sorted = false;
                 }
             }
